@@ -75,12 +75,10 @@ class TestAccount(unittest.TestCase):
         self.assertIsNotNone(account.id)
         accounts = Account.all()
         self.assertEqual(len(accounts), 1)
-
     def test_read_account(self):
         """It should Read an account"""
         account = AccountFactory()
         account.create()
-
         # Read it back
         found_account = Account.find(account.id)
         self.assertEqual(found_account.id, account.id)
