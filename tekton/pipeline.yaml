@@ -50,6 +50,7 @@ spec:
         value: ["--count","--max-complexity=10","--max-line-length=127","--statistics"]
       runAfter:
         - clone
+    
     - name: tests
       workspaces:
         - name: source
@@ -63,6 +64,7 @@ spec:
         value: "-v --with-spec --spec-color"
       runAfter:
         - clone
+    
     - name: deploy
       workspaces:
         - name: manifest-dir
